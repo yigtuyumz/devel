@@ -1,0 +1,5 @@
+obj/
+lists
+external/
+.vscode/
+.venv/
