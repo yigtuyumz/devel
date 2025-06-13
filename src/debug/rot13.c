@@ -1,5 +1,4 @@
 #include "libft.h"
-#include <stdlib.h>
 
 // "Rnpu cebwrpg va gur 42 Pbzzba Pber pbagnvaf na rapbqrq uvag. Sbe rnpu"
 // "pvepyr, bayl bar cebwrpg cebivqrf gur pbeerpg uvag arrqrq sbe gur"
@@ -27,16 +26,12 @@ char	*rot13_decode(char	*encoded)
 	iter = 0;
 	while (iter < alloc_sz)
 	{
-		if (ft_isalpha(*(encoded + iter)))
-		{
-			if ((*(encoded + iter) >= 'A' && *(encoded + iter) <= 'M')
-				|| (*(encoded + iter) >= 'a' && *(encoded + iter) <= 'm'))
-				*(ret + iter) = *(encoded + iter) + 13;
-			else
-				*(ret + iter) = *(encoded + iter) - 13;
-		}
+		if (*(encoded + iter) >= 'A' && *(encoded + iter) <= 'Z')
+			ret[iter] = ((*(encoded + iter) - 'A' + 13) % 26) + 'A';
+		else if (*(encoded + iter) >= 'a' && *(encoded + iter) <= 'z')
+			ret[iter] = ((*(encoded + iter) - 'a' + 13) % 26) + 'a';
 		else
-			*(ret + iter) = *(encoded + iter);
+			ret[iter] = *(encoded + iter);
 		iter++;
 	}
 	*(ret + iter) = 0;

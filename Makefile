@@ -37,6 +37,7 @@ DEPS            := $(OBJS:.o=.d)
 # Don't treat rules as dependencies
 .PHONY: all clean re fclean
 
+# Do not edit below.
 all: $(PROG_NAME)
 
 $(PROG_NAME): $(OBJS)
