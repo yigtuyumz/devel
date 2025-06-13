@@ -35,11 +35,19 @@ FT_SRCS =	ft_atoi.c			\
 			ft_strrchr.c		\
 			ft_substr.c			\
 			ft_tolower.c		\
-			ft_toupper.c
+			ft_toupper.c		\
+			ft_strtrim.c		\
+			ft_split.c
 
-FT_BONUS_SRCS =	ft_lstnew.c		\
-				ft_lstdelone.c
-
+FT_BONUS_SRCS =	ft_lstadd_back.c	\
+				ft_lstadd_front.c	\
+				ft_lstclear.c		\
+				ft_lstdelone.c		\
+				ft_lstiter.c		\
+				ft_lstlast.c		\
+				ft_lstmap.c			\
+				ft_lstnew.c			\
+				ft_lstsize.c
 
 OBJS = $(FT_SRCS:.c=.o)
 BONUS_OBJS = $(FT_BONUS_SRCS:.c=.o)
@@ -62,5 +70,3 @@ fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
-
-
