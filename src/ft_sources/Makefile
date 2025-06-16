@@ -51,13 +51,16 @@ FT_BONUS_SRCS =	ft_lstadd_back.c	\
 OBJS = $(FT_SRCS:.c=.o)
 BONUS_OBJS = $(FT_BONUS_SRCS:.c=.o)
 
+
 all: $(NAME)
 
 $(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)
 
 bonus: $(OBJS) $(BONUS_OBJS)
-	ar rcs $(NAME) $(OBJS) $(BONUS_OBJS)
+	@if ! ar t $(NAME) 2>/dev/null | grep -q 'lst'; then \
+		ar rcs $(NAME) $(OBJS) $(BONUS_OBJS); \
+	fi
 
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
