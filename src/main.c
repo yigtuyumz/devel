@@ -4,7 +4,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
-
+#include <sys/auxv.h>
+#include <elf.h>
+#include <iso646.h>
 
 void print(void *c)
 {

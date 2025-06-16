@@ -6,7 +6,7 @@
 /*   By: yuyumaz <yuyumaz@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/13 03:48:13 by yuyumaz           #+#    #+#             */
-/*   Updated: 2025/06/13 03:48:17 by yuyumaz          ###   ########.fr       */
+/*   Updated: 2025/06/15 20:45:44 by yuyumaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,6 @@
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	t_list	*last;
-
 	if (!lst || !new)
 		return ;
 	if (!(*lst))
@@ -23,6 +21,5 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 		*lst = new;
 		return ;
 	}
-	last = ft_lstlast(*lst);
-	last->next = new;
+	ft_lstlast(*lst)->next = new;
 }

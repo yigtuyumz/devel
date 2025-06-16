@@ -6,7 +6,7 @@
 /*   By: yuyumaz <yuyumaz@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/13 01:18:34 by yuyumaz           #+#    #+#             */
-/*   Updated: 2025/06/13 04:00:14 by yuyumaz          ###   ########.fr       */
+/*   Updated: 2025/06/16 11:13:23 by yuyumaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,6 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	if (fd < 0)
-		return ;
 	if (n < 0)
 	{
 		if (n == -2147483648)

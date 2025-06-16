@@ -6,7 +6,7 @@
 /*   By: yuyumaz <yuyumaz@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/12 17:56:44 by yuyumaz           #+#    #+#             */
-/*   Updated: 2025/06/12 17:56:51 by yuyumaz          ###   ########.fr       */
+/*   Updated: 2025/06/15 23:48:34 by yuyumaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,5 @@ void	*ft_memchr(const void *s, int c, size_t n)
 			return ((void *) p + i);
 		i++;
 	}
-	return (0);
+	return (NULL);
 }

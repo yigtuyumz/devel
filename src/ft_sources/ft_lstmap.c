@@ -6,7 +6,7 @@
 /*   By: yuyumaz <yuyumaz@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/13 03:50:03 by yuyumaz           #+#    #+#             */
-/*   Updated: 2025/06/13 03:50:04 by yuyumaz          ###   ########.fr       */
+/*   Updated: 2025/06/15 23:41:14 by yuyumaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,16 +18,15 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*begin;
 
 	if (!lst || !f)
-		return ((void *) 0);
+		return (NULL);
 	begin = 0;
 	while (lst)
 	{
 		new = ft_lstnew(f(lst->content));
 		if (!new)
 		{
-			if (del)
-				ft_lstclear(&begin, del);
-			return ((void *) 0);
+			ft_lstclear(&begin, del);
+			return (NULL);
 		}
 		ft_lstadd_back(&begin, new);
 		lst = lst->next;

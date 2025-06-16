@@ -3,3 +3,4 @@ lists
 external/
 .vscode/
 .venv/
+src/ft_sources/libft.a
