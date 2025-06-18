@@ -55,5 +55,12 @@ int main(int argc _u, char *argv[] _u)
 
 	ft_lstclear(&head, NULL);
 	ft_lstclear(&new_head, free);
+
+	char *a = ft_strtrim("ttttttwagabond1232rfsdsdf", "t132rfsd");
+	if (!a)
+		printf("NULL!\n");
+	else
+		printf("'%s'\n", a);
+	free(a);
 	return (0);
 }
