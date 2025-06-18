@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yuyumaz <yuyumaz@student.42kocaeli.com.    +#+  +:+       +#+        */
+/*   By: yuyumaz <yuyumaz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/13 00:23:17 by yuyumaz           #+#    #+#             */
-/*   Updated: 2025/06/13 00:38:56 by yuyumaz          ###   ########.fr       */
+/*   Updated: 2025/06/18 12:27:17 by yuyumaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strchr(const char *s, int c)
 			return ((char *) d);
 		d++;
 	}
-	if (c == 0)
+	if ((unsigned char) c == 0)
 		return ((char *) d);
 	return ((char *) 0);
 }

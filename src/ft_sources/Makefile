@@ -58,8 +58,8 @@ $(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)
 
 bonus: $(OBJS) $(BONUS_OBJS)
-	@if ! ar t $(NAME) 2>/dev/null | grep -q 'lst'; then \
-		ar rcs $(NAME) $(OBJS) $(BONUS_OBJS); \
+	ar rcs $(NAME) $(OBJS) $(BONUS_OBJS)
+	if ! ar t $(NAME) 2>/dev/null | grep -q 'lst'; then	\
 	fi
 
 %.o: %.c

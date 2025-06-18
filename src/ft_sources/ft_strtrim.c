@@ -3,14 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yuyumaz <yuyumaz@student.42kocaeli.com.    +#+  +:+       +#+        */
+/*   By: yuyumaz <yuyumaz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/13 03:57:09 by yuyumaz           #+#    #+#             */
-/*   Updated: 2025/06/18 09:15:11 by yuyumaz          ###   ########.fr       */
+/*   Updated: 2025/06/18 13:17:37 by yuyumaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
@@ -34,4 +35,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	ft_strlcpy(str, &s1[start], end - start + 2);
 	return (str);
 }
-
